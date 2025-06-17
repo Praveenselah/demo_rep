@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Row Sort</title>
+</head>
+<body>
+    <h2>Let's Sort</h2>
+
+    <div>
+        <strong>Sort by NAME:</strong>
+        <button onclick="sortTable(0, true)">⬆️ Asc</button>
+        <button onclick="sortTable(0, false)">⬇️ Desc</button>
+    </div>
+
+    <div>
+        <strong>Sort by CHAMPIONSHIPS:</strong>
+        <button onclick="sortTable(1, true)">⬆️ Asc</button>
+        <button onclick="sortTable(1, false)">⬇️ Desc</button>
+    </div>
+
+    <br>
+
+    <table border="1" id="myTable">
+        <tr>
+            <th>NAME</th>
+            <th>CHAMPIONSHIPS</th>
+        </tr>
+        <tr>
+            <td>hamilton</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>schumacher</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Versteppan</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Alnso</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <script>
+        function sortTable(columnIndex, ascending) {
+            let table = document.getElementById("myTable");
+            let switching = true;
+
+            while (switching) {
+                switching = false;
+                let rows = table.rows;
+                console.log("rows",rows);
+
+                for (let i = 1; i < rows.length - 1; i++) {
+                    let x = rows[i].getElementsByTagName("TD")[columnIndex];
+                    let y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
+                    console.log("x",x)
+                    console.log("y",y)
+
+                    let xContent = x.innerHTML.toLowerCase();
+                    let yContent = y.innerHTML.toLowerCase();
+                    console.log("xcontent",xContent);
+                    console.log("ycontent",yContent);
+
+                    // Convert to numbers if column is numeric
+                    if (columnIndex === 1) {
+                        xContent = parseInt(xContent);
+                        yContent = parseInt(yContent);
+                    }
+
+                    let shouldSwitch = false;
+                    if (ascending ? xContent > yContent : xContent < yContent) {
+                        shouldSwitch = true;
+                    }
+
+                    if (shouldSwitch) {
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                        switching = true;
+                        break;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

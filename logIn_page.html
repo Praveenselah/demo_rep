@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <title>Log in page</title>
+    </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e9e7e7;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .footer-text a {
+            color: #4285f4;
+            text-decoration: none;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <h1>Hello There</h1>
+            <form method ="post">
+                <div>
+                    <label>Email address</label><br>
+                    <input type="email" placeholder="email" name="email" required>
+                    
+                </div>
+
+                <div>
+                    <label> password</label><br>
+                    <input type="password" required>
+                </div>
+                <div>forgot password </div>
+                <br>
+                <button onclick="document.location='homePage.html'">Log in </button>
+                <div> Don't have a account <a href="sign_up.html">Sign up</a></div>
+            </form>
+        </div>
+    </body>
+</html>

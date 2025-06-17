@@ -1,0 +1,133 @@
+:root {
+    --main-color: #3498db;
+    --highlight: orange;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  /* Grid and Flexbox */
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .flexbox-layout {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Visibility and Positioning */
+  .visible-box {
+    visibility: visible;
+  }
+  .hidden-box {
+    visibility: hidden;
+  }
+  .relative-box {
+    position: relative;
+  }
+  .fixed-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  
+  /* Layers and Z-Index */
+  .layer1 {
+    z-index: 1;
+    position: absolute;
+    background: lightblue;
+  }
+  .layer2 {
+    z-index: 2;
+    position: absolute;
+    background: lightgreen;
+  }
+  
+  /* Pseudo Classes */
+  a:hover {
+    color: var(--highlight);
+  }
+  a:active {
+    color: red;
+  }
+  input:focus {
+    border-color: var(--main-color);
+  }
+  
+  /* Pseudo Elements */
+  .pseudo-element::before {
+    content: "Note: ";
+    color: red;
+  }
+  .pseudo-element::after {
+    content: " ✔";
+    color: green;
+  }
+  
+  /* @ Rules */
+  @media print {
+    body {
+      color: black;
+      background: none;
+    }
+  }
+  
+  @supports (display: grid) {
+    .support-grid {
+      border: 2px dashed green;
+    }
+  }
+  
+  /* Text Effects */
+  .text-shadow-demo {
+    text-shadow: 2px 2px 4px #aaa;
+  }
+  .letter-spacing-demo {
+    letter-spacing: 2px;
+  }
+  
+  /* Paged Media (print style continues in @media print) */
+  .print-demo {
+    page-break-before: always;
+  }
+  
+  /* Layouts */
+  .two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Validations */
+  input:invalid {
+    border: 2px solid red;
+  }
+  input:valid {
+    border: 2px solid green;
+  }
+  
+  /* Image Sprites */
+  .sprite-demo {
+    background: url('sprite.png') no-repeat -10px -20px;
+    width: 32px;
+    height: 32px;
+  }
+  
+  /* !important */
+  .important-demo {
+    color: red !important;
+  }
+  
+  /* Data Types (used within properties) */
+  .datatype-demo {
+    margin: 10px; /* <length> */
+    color: rgba(255, 0, 0, 0.5); /* <color> */
+    font-size: 1.2em; /* <length> */
+  }
+  
+  /* Previously defined styles here (shortened to keep this update clean) */
+  /* Assume all previous CSS rules are kept and included as is */
+  

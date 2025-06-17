@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student database</title>
+        <link rel="stylesheet" href="student2.css">
+    </head>
+    <body>
+        <h2>Student details</h2>
+        <table border="1" id="Mytable">
+            <thead>
+            <tr>
+                <th>NAME</th>
+                <th>ROLL_NO</th>
+                <th>Section</th>
+                <th>Branch</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>arya</td>
+                <td>79</td>
+                <td>D</td>
+                <td>EEE</td>
+            </tr>
+            <tr>
+                <td>Micheal</td>
+                <td>74</td>
+                <td>F</td>
+                <TD>Bio</TD>
+            </tr>
+            <tr>
+                <td>Mathi</td>
+                <td>65</td>
+                <TD>I</TD>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        <h3>Add Student</h3>
+        <input type="text" id="name" placeholder="Name">
+        <input type="number" id="ROLLNO" placeholder="ROLL_NO">
+        <input type="text" id="Section" placeholder="Section">
+        <input type="text" id="Branch" placeholder="Branch">
+        <button onclick="adddata()">Add</button>
+        <button onclick="deleteCell()">Delete</button>
+
+
+        <script>
+            function adddata() {
+                const NAME = document.getElementById("name").value;
+                const ROLL_NO = document.getElementById("ROLLNO").value;
+                const Section = document.getElementById("Section").value;
+                const Branch = document.getElementById("Branch").value;
+
+                const table = document.getElementById("Mytable").getElementsByTagName("tbody")[0];
+                 const row = table.insertRow();
+                    row.insertCell(0).innerText = NAME;
+                    row.insertCell(1).innerText = ROLL_NO;
+                    row.insertCell(2).innerText = Section;
+                    row.insertCell(3).innerText = Branch;
+                    
+                }
+                function delrow() {
+                const tableBody = document.getElementById("Mytable").getElementsByTagName("tbody")[0];
+                if (tableBody.rows.length > 0) {
+                    tableBody.deleteRow(tableBody.rows.length - 1);
+                } else {
+                alert("no more rows");
+                }
+            }
+
+            
+        </script>
+    </body>
+</html>

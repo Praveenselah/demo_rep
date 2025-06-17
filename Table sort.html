@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head> Table sort </head>
+    <body>
+        <h2>Lets Sort</h2>
+        <button onclick="sortascend()">⬆️</button>
+        <button onclick="sortdescend()">⬇️</button>
+        <table border="1" id="Mytable">
+            <tr>
+                <th>NAME</th>
+                <th>CHAMPIONSHIPS</th>
+            </tr>
+            <tr>
+                <td>Lewis hamilton</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Micheal schumacher</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Max Versteppan</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Fernado Alnso</td>
+                <td>1</td>
+            </tr>
+        </table>
+
+        <script>
+            function sortascend() {
+                var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[1];
+      y = rows[i + 1].getElementsByTagName("TD")[1];
+      if (Number(x.innerHTML) > Number(y.innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+
+        </script>
+    </body>
+</html>

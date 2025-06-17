@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student database</title>
+        <style>
+             body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 20px;
+        }
+
+        h2, h3 {
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4cafad;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            background-color: #3282c4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #07334e;
+        }
+        </style>
+    </head>
+    <body>
+        <h2>Student details</h2>
+        <table border="1" id="Mytable">
+            <thead>
+            <tr>
+                <th>NAME</th>
+                <th>ROLL_NO</th>
+                <th>Section</th>
+                <th>Branch</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>arya</td>
+                <td>79</td>
+                <td>D</td>
+                <td>EEE</td>
+            </tr>
+            <tr>
+                <td>Micheal</td>
+                <td>74</td>
+                <td>F</td>
+                <TD>Bio</TD>
+            </tr>
+            <tr>
+                <td>Mathi</td>
+                <td>65</td>
+                <TD>I</TD>
+                <td>Cse</td>
+            </tr>
+        </table>
+        <br>
+        <h3>Add Student</h3>
+        <input type="text" id="name" placeholder="Name">
+        <input type="number" id="ROLLNO" placeholder="ROLL_NO">
+        <input type="text" id="Section" placeholder="Section">
+        <input type="text" id="Branch" placeholder="Branch">
+        <button onclick="adddata()">Add</button>
+        <h3>Delete Cell by Value</h3>
+        <input type="text" id="cellValue" placeholder="Enter cell value to delete">
+        <button onclick="deleteCell()">Delete Cell</button>
+
+        <script>
+            function adddata() {
+                const NAME = document.getElementById("name").value;
+                const ROLL_NO = document.getElementById("ROLLNO").value;
+                const Section = document.getElementById("Section").value;
+                const Branch = document.getElementById("Branch").value;
+
+                const table = document.getElementById("Mytable").getElementsByTagName("tbody")[0];
+                 const row = table.insertRow();
+                    row.insertCell(0).innerText = NAME;
+                    row.insertCell(1).innerText = ROLL_NO;
+                    row.insertCell(2).innerText = Section;
+                    row.insertCell(3).innerText = Branch;
+                    
+                }
+                function deleteCell() {
+            const valueToDelete = document.getElementById("cellValue").value;
+            const table = document.getElementById("Mytable").getElementsByTagName("tbody")[0];
+            let found = false;
+
+            for (let i = 0; i < table.rows.length; i++) {
+                const row = table.rows[i];
+                for (let j = 0; j < row.cells.length; j++) {
+                    if (row.cells[j].innerText === valueToDelete) {
+                        row.deleteCell(j);
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) break;
+            }
+
+            if (!found) {
+                alert("No matching cell found.");
+            }
+        }
+        </script>
+    </body>
+</html>

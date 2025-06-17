@@ -1,0 +1,444 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    color: #0056b3;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+#selectors-section p {
+    color: #555;
+}
+
+#selectors-section .highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#selectors-section #unique-div {
+    border: 1px solid #007bff;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#selectors-section ul li {
+    list-style-type: square;
+    color: #007bff;
+}
+
+
+.text-color {
+    color: #dc3545; 
+}
+
+.box-color {
+    background-color: #28a745; 
+    color: white;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.bg-img {
+    background-image: url("C:\Users\praveen\Downloads\2021-Pagani-Imola-010-1080.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #000;
+    padding: 30px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bg-grad {
+    background: linear-gradient(to right, #007bff, #6f42c1); 
+    color: white;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.font-fam {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+.font-size {
+    font-size: 1.5em; 
+    margin-top: 10px;
+}
+
+.font-weight-style {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+
+.text-align {
+    text-align: center;
+}
+
+.text-dec {
+    text-decoration: underline wavy #ff6607; 
+    margin-top: 10px;
+}
+
+.text-transform {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.line-height {
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.responsive-image {
+    max-width: 100%; 
+    height: auto;    
+    display: block;  
+    margin: 15px 0;
+    border: 3px solid #00ffa6;
+    border-radius: 5px;
+}
+
+
+.styled-link {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.styled-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.pseudo-link {
+    color: purple;
+    text-decoration: none;
+}
+
+.pseudo-link:hover {
+    font-weight: bold;
+    text-decoration: overline;
+    color: darkgreen;
+}
+
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th,
+.styled-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.basic-border {
+    border: 2px solid #333;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.rounded-border {
+    border: 2px dashed #ffc107;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.dashed-border {
+    border: 3px dotted #17a2b8;
+    padding: 10px;
+}
+
+
+.border-blo {
+    padding: 20px;
+    border-block-start: 5px solid #28a745; 
+    border-block-end: 5px solid #28a745;
+    margin-top: 15px;
+    background-color: #f8f9fa;
+}
+
+
+.border-inline {
+    padding: 20px;
+    border-inline-start: 5px solid #dc3545; 
+    border-inline-end: 5px solid #dc3545;
+    margin-top: 15px;
+    background-color: #f8f9fa;
+}
+
+
+.margin-ex-1 {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin: 20px; 
+    border: 1px solid #ccc;
+}
+
+.margin-ex-2 {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin: 10px 30px 5px 40px; 
+    border: 1px solid #ccc;
+    margin-top: 20px; 
+}
+
+
+.styled-ul {
+    list-style-type: circle;
+    color: #6c757d;
+}
+
+.styled-ul li {
+    padding: 5px 0;
+}
+
+.styled-ol {
+    list-style-type: upper-roman;
+    color: #007bff;
+}
+
+.styled-ol li {
+    padding: 5px 0;
+}
+
+
+.padding-ex {
+    background-color: #ffe0b2; /* Light orange */
+    border: 1px solid #ff9800;
+    padding: 30px; /* All sides */
+    margin-top: 20px;
+}
+
+/* 15. CSS Cursor */
+.cursor-pointer {
+    cursor: pointer;
+    background-color: #e0f7fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00bcd4;
+    display: inline-block;
+}
+
+.cursor-help {
+    cursor: help;
+    background-color: #e0f7fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00bcd4;
+    display: inline-block;
+}
+
+.cursor-wait {
+    cursor: wait;
+    background-color: #e0f7fa;
+    padding: 10px;
+    border: 1px solid #00bcd4;
+    display: inline-block;
+}
+
+/* 16. CSS Outlines */
+.outline-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.outline-button:focus {
+    outline: 3px solid #ffc107; 
+    outline-offset: 2px;
+}
+
+.outline-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.outline-input:focus {
+    outline: 2px dotted #28a745; 
+    outline-offset: 3px;
+}
+
+
+.dim-box {
+    width: 200px;
+    height: 100px;
+    background-color: #adb5bd;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.min-max-dim {
+    width: 80%; 
+    min-width: 150px; 
+    max-width: 400px; 
+    height: auto;
+    min-height: 80px;
+    max-height: 150px;
+    background-color: #6c757d;
+    margin-top: 15px;
+    padding: 10px;
+    color: white;
+}
+
+
+.custom-scrollbar-container::-webkit-scrollbar {
+    height: 200px;
+    overflow: auto; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #f0f8ff;
+}
+
+
+.custom-scrollbar-container::-webkit-scrollbar {
+    width: 12px; 
+}
+
+
+.custom-scrollbar-container::-webkit-scrollbar-thumb {
+    background-color: #007bff; 
+    border-radius: 6px;
+    border: 3px solid #f0f8ff; 
+}
+
+
+.custom-scrollbar-container::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3; 
+}
+
+
+.custom-scrollbar-container::-webkit-scrollbar-track {
+    background-color: #e9ecef;
+}
+
+
+.inline-block-item {
+    display: inline-block; 
+    width: 100px;
+    height: 50px;
+    background-color: #17a2b8; 
+    color: white;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px; 
+    border-radius: 5px;
+}
+
+#inline-block-section span {
+    background-color: #ffc107;
+    padding: 5px;
+    margin: 5px;
+    display: inline; 
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block; 
+    margin-top: 15px;
+}
+
+.dropbtn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute; 
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #eee;
+    color: #555;
+    border-top: 1px solid #ddd;
+}

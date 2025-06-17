@@ -1,0 +1,290 @@
+:root {
+    --main-color: #3498db;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .resize {
+    resize: both;
+    overflow: auto;
+    border: 1px solid #ccc;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .order {
+    display: flex;
+  }
+  .order1 { order: 2; }
+  .order2 { order: 1; }
+  
+  .position {
+    position: relative;
+    height: 100px;
+  }
+  .absolute-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: yellow;
+  }
+  
+  .hover-btn:hover {
+    background-color: var(--main-color);
+    color: white;
+  }
+  
+  .display {
+    display: block;
+  }
+  
+  .focus-input:focus {
+    border: 2px solid var(--main-color);
+  }
+  
+  .zoom-box {
+    transition: transform 0.3s;
+  }
+  .zoom-box:hover {
+    transform: scale(1.2);
+  }
+  
+  .translate-box {
+    transform: translateX(50px);
+  }
+  
+  .height-width-box {
+    width: 150px;
+    height: 50px;
+    background: lightgray;
+  }
+  
+  .opacity-box {
+    opacity: 0.5;
+  }
+  
+  .zindex-container {
+    position: relative;
+  }
+  .zindex-box {
+    position: absolute;
+    z-index: 10;
+    background: orange;
+  }
+  
+  .bottom-box {
+    position: absolute;
+    bottom: 0;
+    background: lightblue;
+  }
+  
+  .navbar {
+    background: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+  }
+  
+  .form input {
+    padding: 5px;
+  }
+  
+  .align {
+    text-align: center;
+  }
+  
+  .icon {
+    font-size: 24px;
+  }
+  
+  .image-gallery img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .comments::before {
+    content: "/* Comment */";
+    color: green;
+  }
+  
+  .loader {
+    width: 20px;
+    height: 20px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  [data-type="example"] {
+    background: lightgreen;
+  }
+  
+  .combinator p {
+    color: purple;
+  }
+  
+  .root-var {
+    color: var(--main-color);
+  }
+  
+  .box-model {
+    padding: 10px;
+    border: 1px solid black;
+    margin: 5px;
+  }
+  
+  .counter {
+    counter-reset: section;
+  }
+  
+  .clip {
+    clip-path: circle(40%);
+    background: red;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .writing-mode {
+    writing-mode: vertical-rl;
+  }
+  
+  .unicode-bidi {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+  
+  .all-demo {
+    all: initial;
+  }
+  
+  .inset {
+    position: absolute;
+    inset: 10px;
+  }
+  
+  .isolation {
+    isolation: isolate;
+  }
+  
+  .overscroll {
+    overscroll-behavior: contain;
+  }
+  
+  .justify {
+    display: grid;
+    justify-items: center;
+  }
+  
+  .tabsize {
+    tab-size: 4;
+  }
+  
+  .pointer-events {
+    pointer-events: none;
+  }
+  
+  .place-content {
+    display: grid;
+    place-content: center;
+  }
+  
+  .place-items {
+    display: grid;
+    place-items: center;
+  }
+  
+  .place-self {
+    display: grid;
+  }
+  .place-self div {
+    place-self: center;
+  }
+  
+  .max-block-size {
+    max-block-size: 50px;
+    background: lightgray;
+  }
+  
+  .min-block-size {
+    min-block-size: 30px;
+    background: lightcoral;
+  }
+  
+  .mix-blend-mode {
+    background-color: yellow;
+    mix-blend-mode: multiply;
+  }
+  
+  .max-inline-size {
+    max-inline-size: 100px;
+    overflow-wrap: break-word;
+  }
+  
+  .min-inline-size {
+    min-inline-size: 50px;
+  }
+  
+  .offset {
+    offset: 10px;
+  }
+  
+  .accent-color {
+    accent-color: var(--main-color);
+  }
+  
+  .user-select {
+    user-select: none;
+  }
+  
+  .cascade {
+    color: green;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  #id-selector {
+    color: red;
+  }
+  
+  .group1.group2 {
+    background: pink;
+  }
+  
+  .class-selector {
+    font-weight: bold;
+  }
+  
+  .child-selector {
+    color: blue;
+  }
+  
+  .element-selector {
+    font-style: italic;
+  }
+  
+  .descendant-selector {
+    color: navy;
+  }
+  
+  .sibling-selector ~ .adjacent-sibling {
+    color: orange;
+  }
+  
