@@ -1,0 +1,183 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f9ff;
+    color: #222;
+  }
+  
+  header {
+    background-color: white;
+    color: black;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .topbar {
+    color: white;
+    background-color: #0d6efd;
+  }
+  
+  
+  nav a {
+    color: black;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .Blu{
+    color: #0d6efd;
+  }
+  
+  button {
+    padding: 8px 12px;
+    margin: 5px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #052a63;
+}
+
+
+.land h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.land .highlight {
+  color: #0d6efd;
+}
+
+.land input {
+  padding: 10px;
+  margin: 8px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.land button {
+  padding: 10px 20px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.land {
+  display: flex;
+  background-color: #4c83d698;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 20px;
+}
+
+.land-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;  
+  gap: 20px;
+}
+
+.land-right img {
+  width: 500px; 
+  height: auto;
+  display: block;
+}
+
+.cont {
+  display: flex;
+  background-color: #fff;
+  padding: 40px;
+  width: auto;
+  margin: auto;
+  align-items: center;
+}
+
+.left {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.img-circle {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.experience-badge {
+  position:absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle {
+  background: white;
+  border: 5px solid #0d6efd;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.years {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+.text {
+  text-align: center;
+  font-size: 15px;
+  color: #0d6efd;
+}
+
+.right-aboutus {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.about-us {
+  color: #0d6efd;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.high-light {
+  color: #0d6efd;
+  line-height: 10px;
+}
+
+.desc {
+  color: #666;
+}
+
+.features{
+  list-style: none;
+  padding-left: 0;
+  margin: 20px;
+}
+
+.features li{
+  background: url("C:\Users\praveen\Downloads\check-list.png");
+  background-size: 20px 20px;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: black;
+}
